@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Show info about mounted volumes
+function c_show_mnt() {
+	sudo mount | column -t
+}
+
+# Share a single file over a specified port
+function c_web_file() {
+	sudo nc -v -l ${1} < ${2}
+}
+
+# Run a command and display how long it took to complete
+function c_proc_time() {
+	STARTTIME=$(date "+%s.%N")
+	$*
+	PROCESSTIME=$(echo "$(date +%s.%N)-$STARTTIME" | bc)
+	echo "Process took $PROCESSTIME seconds."
+}
+
+# Show files changed in last 24 hours in current dir
+function c_lastchanged() {
+	find -maxdepth 1 -mtime -1 -printf "%Tk:%TM - %f\n" | sort -rn
+}
