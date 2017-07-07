@@ -1,3 +1,4 @@
+execute pathogen#infect()
 " vim:fdm=marker
 
 " Preamble {{{
