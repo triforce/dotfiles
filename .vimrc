@@ -6,6 +6,7 @@ execute pathogen#infect()
 		set background=dark
 		syntax on
 		colorscheme solarized
+		let NERDTreeQuitOnOpen=1
 	" }}}
 
 	" General {{{
