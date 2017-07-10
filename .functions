@@ -22,3 +22,8 @@ function c_proc_time() {
 function c_lastchanged() {
 	find -maxdepth 1 -mtime -1 -printf "%Tk:%TM - %f\n" | sort -rn
 }
+
+# Simple calculator
+function calc {
+	echo "${1}" | bc -l
+}
