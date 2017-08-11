@@ -1,6 +1,9 @@
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
+# Resize window
+shopt -s checkwinsize
+
 # Environment vars
 # Set vim as default
 export EDITOR="vim"
