@@ -13,6 +13,8 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 alias vi="vim"
 alias la="ls -la"
 alias lt="ls -lrt"
+alias showm="ps -eo pmem,args --sort=-%mem | head"
+alias showcpu="ps -eo pcpu,args --sort=-%cpu | head"
 
 # Git aware prompt
 source "${GITAWAREPROMPT}/main.sh"
